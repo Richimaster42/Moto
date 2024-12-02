@@ -2,16 +2,16 @@
     "01": {
         "grupo": "Grupo A",
         "numero_mototaxi": "001",
-        "quejas_reclamos": 100000000
+        "quejas_reclamos": "123456"
     },
     "02": {
         "grupo": "Grupo A",
         "numero_mototaxi": "002",
-        "quejas_reclamos": 1
+        "quejas_reclamos": "123456"
     },
     "03": {
         "grupo": "Grupo B",
         "numero_mototaxi": "003",
-        "quejas_reclamos": 0
+        "quejas_reclamos": "123456"
     }
 }
