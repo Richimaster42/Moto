@@ -2,8 +2,8 @@ import qrcode
 
 # Información de los mototaxis
 mototaxis = [
-    {"grupo": "Grupo A", "numero": "001", "url": "https://tuusuario.github.io/mototaxi-system/?id=001"},
-    {"grupo": "Grupo B", "numero": "002", "url": "https://tuusuario.github.io/mototaxi-system/?id=002"},
+    {"grupo": "Grupo A", "numero": "001", "url": "https://Richimaster42.github.io/Moto/?id=001"},
+    {"grupo": "Grupo B", "numero": "002", "url": "https://Richimaster42.github.io/Moto/?id=002"},
 ]
 
 # Generar códigos QR
