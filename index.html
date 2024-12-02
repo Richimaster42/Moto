@@ -3,32 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mototaxi System</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Información del Mototaxi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .info {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Información de Mototaxis</h1>
-    <p>Escanea un código QR para ver los detalles de un mototaxi.</p>
-    <table>
-        <thead>
-            <tr>
-                <th>Grupo</th>
-                <th>Número del Mototaxi</th>
-                <th>Contacto para Quejas</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Grupo A</td>
-                <td>001</td>
-                <td>+52 123 456 7890</td>
-            </tr>
-            <tr>
-                <td>Grupo B</td>
-                <td>002</td>
-                <td>+52 987 654 3210</td>
-            </tr>
-        </tbody>
-    </table>
+    <h1>Información del Mototaxi</h1>
+    <div id="info" class="info">
+        Cargando información...
+    </div>
+
+    <script>
+        // Obtener el ID del QR desde la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = urlParams.get('id');
+
+        // Cargar los datos del archivo JSON
+        fetch("mototaxis.json")
+            .then(response => response.json())
+            .then(data => {
+                const mototaxi = data[id];
+                const infoDiv = document.getElementById("info");
+
+                if (mototaxi) {
+                    infoDiv.innerHTML = `
+                        <p><strong>Nombre:</strong> ${mototaxi.nombre}</p>
+                        <p><strong>Modelo:</strong> ${mototaxi.modelo}</p>
+                        <p><strong>Placa:</strong> ${mototaxi.placa}</p>
+                        <p><strong>Color:</strong> ${mototaxi.color}</p>
+                    `;
+                } else {
+                    infoDiv.innerHTML = "No se encontró información para este ID.";
+                }
+            })
+            .catch(error => {
+                console.error("Error al cargar los datos:", error);
+                document.getElementById("info").innerText = "Error al cargar la información.";
+            });
+    </script>
 </body>
 </html>
