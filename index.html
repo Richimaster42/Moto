@@ -13,6 +13,9 @@
         .info {
             margin-top: 20px;
         }
+        .error {
+            color: red;
+        }
     </style>
 </head>
 <body>
@@ -35,18 +38,17 @@
 
                 if (mototaxi) {
                     infoDiv.innerHTML = `
-                        <p><strong>Nombre:</strong> ${mototaxi.nombre}</p>
-                        <p><strong>Modelo:</strong> ${mototaxi.modelo}</p>
-                        <p><strong>Placa:</strong> ${mototaxi.placa}</p>
-                        <p><strong>Color:</strong> ${mototaxi.color}</p>
+                        <p><strong>Grupo:</strong> ${mototaxi.grupo}</p>
+                        <p><strong>Número de Mototaxi:</strong> ${mototaxi.numero_mototaxi}</p>
+                        <p><strong>Quejas y Reclamos:</strong> ${mototaxi.quejas_reclamos}</p>
                     `;
                 } else {
-                    infoDiv.innerHTML = "No se encontró información para este ID.";
+                    infoDiv.innerHTML = `<p class="error">No se encontró información para este ID.</p>`;
                 }
             })
             .catch(error => {
                 console.error("Error al cargar los datos:", error);
-                document.getElementById("info").innerText = "Error al cargar la información.";
+                document.getElementById("info").innerHTML = `<p class="error">Error al cargar la información.</p>`;
             });
     </script>
 </body>
