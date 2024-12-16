@@ -11,11 +11,10 @@
             margin: 0;
             padding: 0;
             background-image: url('logo.png'); /* Ruta de la imagen de fondo */
-            background-size: cover; /* Ajusta para que cubra toda la pantalla */
+            background-size: 100% 100%; /* Ajusta al tamaño de la ventana */
             background-position: center center; /* Centra la imagen */
             background-repeat: no-repeat; /* Evita que se repita */
             background-attachment: fixed; /* Fija la imagen al fondo */
-            filter: opacity(0.5); /* Aplica opacidad al fondo */
         }
 
         /* Contenedor principal */
@@ -23,16 +22,17 @@
             max-width: 600px;
             margin: 50px auto;
             padding: 20px;
-            background: rgba(0, 0, 0, 0.8); /* Fondo semitransparente */
+            background: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            color: #f4f4f4; /* Texto claro para contraste */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Sombra más visible */
+            border: 2px solid #ffcc00; /* Borde dorado para resaltar */
+            color: #333; /* Color de texto oscuro */
         }
 
         /* Título */
         h1 {
             text-align: center;
-            color: #ffcc00; /* Tono dorado */
+            color: #0056b3; /* Azul oscuro */
             margin-bottom: 20px;
         }
 
@@ -47,12 +47,12 @@
         }
 
         .info p strong {
-            color: #ffcc00; /* Mismo tono dorado */
+            color: #ff6600; /* Naranja para destacar */
         }
 
         /* Mensaje de error */
         .error {
-            color: #ff6666; /* Rojo suave */
+            color: #ff3333; /* Rojo brillante */
             font-weight: bold;
         }
 
@@ -61,7 +61,7 @@
             text-align: center;
             margin-top: 20px;
             font-size: 14px;
-            color: #aaa; /* Gris claro */
+            color: #555; /* Gris oscuro */
         }
 
         /* Botón volver (opcional) */
@@ -69,8 +69,8 @@
             display: inline-block;
             margin-top: 20px;
             padding: 10px 20px;
-            background-color: #ffcc00;
-            color: #000;
+            background-color: #0056b3;
+            color: #fff;
             text-decoration: none;
             font-weight: bold;
             border-radius: 5px;
@@ -79,7 +79,7 @@
         }
 
         .btn:hover {
-            background-color: #ffdd44;
+            background-color: #0077e6;
         }
     </style>
 </head>
